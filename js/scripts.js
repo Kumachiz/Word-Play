@@ -5,9 +5,15 @@ $(function() {
     var firstArrayWords = sentence.split(" ");
     alert(firstArrayWords);
 
-    if (sentence.length < 1) {
-      return false;
-    } //if else ((sentence.length === 1) &&
+
+    var reverseArray = firstArrayWords.reverse();
+    alert(reverseArray);
+    alert(firstArrayWords.length);
+    alert(sentence.length);
+
+    //if (sentence.length < 1) {
+    //  return false;
+    //} //if else ((sentence.length === 1) &&
 
     //var secondArray = firstArrayWords.map(function(firstArrayWord) {
     //  return sentence.length <= 3;
