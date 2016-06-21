@@ -1,23 +1,20 @@
 $(function() {
-  $("form#leap-year").submit(function(event) {
+  $("form#word-play").submit(function(event) {
     event.preventDefault();
-    var leapYear = function(year) {
-      if ((year % 100 !== 0) && (year % 4 === 0) || (year % 400 === 0)) {
-        return true;
-      } else {
-        return false;
-      }
-    };
+    var sentence = $("input#sentence").val();
+    var firstArrayWords = sentence.split(" ");
+    alert(firstArrayWords);
 
-    var year = parseInt($("input#year").val());
-    var result = leapYear(year);
-    $(".year").text(year);
+    if (sentence.length < 1) {
+      return false;
+    } //if else ((sentence.length === 1) &&
 
-    if (!result) {
-      $(".not").text("not");
-    } else {
-      $(".not").text("");
-    }
+    //var secondArray = firstArrayWords.map(function(firstArrayWord) {
+    //  return sentence.length <= 3;
+    //});
+
+
+
 
     $("#result").show();
 
